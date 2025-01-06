@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="apps.app_myfactory.controllerUI.MainView">
+   <top>
+      <Pane prefHeight="74.0" prefWidth="1054.0" style="-fx-background-color: #eeeff1;" BorderPane.alignment="CENTER">
+         <Label fx:id="logo" layoutX="14.0" layoutY="13.0" prefHeight="51.0" prefWidth="145.0" text="MyFactory" textFill="#248aed">
+            <font>
+               <Font name="System Bold Italic" size="26.0" />
+            </font>
+         </Label>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="554.0" prefWidth="190.0" style="-fx-background-color: #248aed;" BorderPane.alignment="CENTER">
+         <VBox layoutX="4.0" layoutY="20.0" prefHeight="209.0" prefWidth="158.0" spacing="5.0">
+            <padding>
+               <Insets top="5.0" />
+            </padding>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <Button fx:id="btn_dashboard" mnemonicParsing="false" onAction="#navigateToDashboard" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: none;" text="Dashboard" textFill="WHITE">
+               <VBox.margin>
+                  <Insets top="4.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_employes" layoutX="18.0" layoutY="19.0" mnemonicParsing="false" onAction="#navigateToEmployes" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: none;" text="Employes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_inventory" layoutX="18.0" layoutY="54.0" mnemonicParsing="false" onAction="#navigateToInventory" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: none;" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btn_orders" layoutX="18.0" layoutY="89.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: none;" text="Orders" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </VBox>
+         <Pane layoutX="-3.0" layoutY="492.0" prefHeight="38.0" prefWidth="193.0" style="-fx-background-color: #1a57d0;">
+            <children>
+               <Label layoutX="26.0" layoutY="11.0" text="MyFactory@gmail.com" textFill="WHITE">
+                  <font>
+                     <Font name="System Bold Italic" size="13.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="537.0" prefWidth="864.0" style="-fx-background-color: #e9ecf0;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
