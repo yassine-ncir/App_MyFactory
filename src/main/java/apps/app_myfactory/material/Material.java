@@ -2,14 +2,16 @@ package apps.app_myfactory.material;
 
 public class Material {
     private Long id;                 // Unique identifier
-    private String materialName;             // Material name
+    private String name;             // Material name
     private String unit;
     private double quantity;
+    private double price;
 
-    public Material(String itemName, String unit, double quantity) {
-        this.materialName = itemName;
+    public Material(String itemName, String unit, double quantity, double price) {
+        this.name = itemName;
         this.unit = unit;
         this.quantity = quantity;
+        this.price = price;
     }
 
     public Long getId() {
@@ -21,11 +23,11 @@ public class Material {
     }
 
     public String getItemName() {
-        return materialName;
+        return name;
     }
 
     public void setItemName(String itemName) {
-        this.materialName = itemName;
+        this.name = itemName;
     }
 
     public String getUnit() {
@@ -42,5 +44,13 @@ public class Material {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

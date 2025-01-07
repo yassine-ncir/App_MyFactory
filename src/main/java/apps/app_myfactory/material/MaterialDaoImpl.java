@@ -11,13 +11,14 @@ public class MaterialDaoImpl implements MaterialDao{
 
     @Override
     public void saveMaterialDao(Material material) {
-        String sql = "INSERT INTO materials (itemName, unit, quantity) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO materials (itemName, unit, quantity, price) VALUES (?, ?, ?,?)";
         try (Connection connection = cnx.getConnectionDB();
              PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
             ps.setString(1, material.getItemName());
             ps.setString(2, material.getUnit());
             ps.setDouble(3, material.getQuantity());
+            ps.setDouble(3, material.getPrice());
             ps.executeUpdate();
 
             // Retrieve the generated ID
@@ -64,7 +65,8 @@ public class MaterialDaoImpl implements MaterialDao{
                     Material material = new Material(
                             rs.getString("itemName"),
                             rs.getString("unit"),
-                            rs.getDouble("quantity")
+                            rs.getDouble("quantity"),
+                            rs.getDouble("price")
                     );
                     material.setId(rs.getLong("id"));
                     return material;
@@ -90,7 +92,8 @@ public class MaterialDaoImpl implements MaterialDao{
                 Material material = new Material(
                         rs.getString("itemName"),
                         rs.getString("unit"),
-                        rs.getDouble("quantity")
+                        rs.getDouble("quantity"),
+                        rs.getDouble("price")
                 );
                 material.setId(rs.getLong("id"));
                 materialList.add(material);
