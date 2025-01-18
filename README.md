@@ -28,3 +28,8 @@ this is the diagram of MyFactory app:
 ![MyFactory drawio](https://github.com/user-attachments/assets/1d5dd9c0-0b39-4bea-9a05-c4b0cac6de3d)
 
 => the Order section isn't complete
+
+Futures:
+  + login
+  + send emails to employees & reports to admin
+  + Dashboard 
